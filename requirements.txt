@@ -1,3 +1,4 @@
 pandas==2.*
 datasets==2.*
 renumics-spotlight==1.6.*
+matplotlib==3.9.*
