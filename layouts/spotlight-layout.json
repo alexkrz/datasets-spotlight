@@ -1,0 +1,95 @@
+{
+    "orientation": "vertical",
+    "children": [
+        {
+            "kind": "split",
+            "weight": 60,
+            "orientation": "horizontal",
+            "children": [
+                {
+                    "kind": "tab",
+                    "weight": 60,
+                    "children": [
+                        {
+                            "kind": "widget",
+                            "name": "Table",
+                            "type": "table",
+                            "config": {
+                                "tableView": "full",
+                                "visibleColumns": null,
+                                "sorting": [
+                                    [
+                                        "label",
+                                        "ASC"
+                                    ]
+                                ],
+                                "orderByRelevance": false
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "tab",
+                    "weight": 40,
+                    "children": [
+                        {
+                            "kind": "widget",
+                            "name": "Similarity Map",
+                            "type": "similaritymap",
+                            "config": {
+                                "placeBy": null,
+                                "reductionMethod": null,
+                                "colorBy": null,
+                                "sizeBy": null,
+                                "filter": false,
+                                "umapNNeighbors": null,
+                                "umapMetric": null,
+                                "umapMinDist": null,
+                                "pcaNormalization": null,
+                                "umapMenuLocalGlobalBalance": null,
+                                "umapMenuIsAdvanced": false
+                            }
+                        },
+                        {
+                            "kind": "widget",
+                            "name": "Scatter Plot",
+                            "type": "scatterplot",
+                            "config": {
+                                "xAxisColumn": null,
+                                "yAxisColumn": null,
+                                "colorBy": null,
+                                "sizeBy": null,
+                                "filter": false
+                            }
+                        },
+                        {
+                            "kind": "widget",
+                            "name": "Histogram",
+                            "type": "histogram",
+                            "config": {
+                                "columnKey": null,
+                                "stackByColumnKey": null,
+                                "filter": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "tab",
+            "weight": 40,
+            "children": [
+                {
+                    "kind": "widget",
+                    "name": "Inspector",
+                    "type": "inspector",
+                    "config": {
+                        "views": null,
+                        "visibleColumns": 6
+                    }
+                }
+            ]
+        }
+    ]
+}
