@@ -17,13 +17,13 @@ def main(out_dir: Path = Path.home() / "Data" / "EmotionRecognition" / "affectne
     # OLD: Unfortunately, currently the label mapping is not included in the parquet file.
     # Instead, we should export the labels as a separate .json file
     print(ds.features)
-    # class_label: datasets.ClassLabel = ds.features["label"]
-    # class_names = class_label.names
-    # class_dict = {idx: name for idx, name in enumerate(class_names)}
+    class_label: datasets.ClassLabel = ds.features["label"]
+    class_names = class_label.names
+    class_dict = {idx: name for idx, name in enumerate(class_names)}
 
-    # with open(out_dir / "class_names.json", "w") as f:
-    #     json.dump(class_dict, f, indent=4)
-    #     f.write("\n")  # Add a trailing newline
+    with open(out_dir / "class_names.json", "w") as f:
+        json.dump(class_dict, f, indent=4)
+        f.write("\n")  # Add a trailing newline
 
     # Here we save the dataset as a single .parquet file
     ds.to_parquet(out_dir / "affectnethq.parquet")
